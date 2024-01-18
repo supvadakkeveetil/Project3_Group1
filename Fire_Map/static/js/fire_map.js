@@ -18,7 +18,7 @@ basemap.addTo(map);
 
 // Retrieve the data from the geojson
 
-fetch('Fire_Map/output.geojson')
+fetch('C:/Users/jesse/Project_3/Fire_Map/output.geojson')
   .then(response => response.json())
   .then(data => {
     // Handle the response data
