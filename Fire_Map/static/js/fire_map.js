@@ -18,9 +18,14 @@ basemap.addTo(map);
 
 // Retrieve the data from the geojson
 
-d3.json('C:/Users/jesse/Project_3/output.geojson').then((data)=> {
-
-});
+fetch('https://raw.githubusercontent.com/supvadakkeveetil/Project3_Group1/main/Fire_Map/static/js/fire_map.js')
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+  })
+  .catch(error => {
+    // Handle any errors
+  });
 
 // Add a click event listener to the map based on year
 
