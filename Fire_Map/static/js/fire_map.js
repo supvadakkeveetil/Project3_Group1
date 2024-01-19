@@ -35,9 +35,12 @@ let layers = {
 
 let map = L.map('map', {
   center: [
-      37.09, -119.45
+      36.78, -119.45
   ],
-  zoom: 4,
+  zoom: 8,
+  layers: [
+    layers["2020"]
+  ]
 });
 
 // Create an overlay and add layer controls
@@ -77,36 +80,40 @@ basemap.addTo(map);
 
 // Retrieve the data from the geojson
 
-fetch('https://raw.githubusercontent.com/supvadakkeveetil/Project3_Group1/main/Fire_Map/wildfire_geo_CA2.geojson')
-  .then(response => response.json())
+d3.json('https://raw.githubusercontent.com/supvadakkeveetil/Project3_Group1/main/Fire_Map/wildfire_geo_CA2.geojson')
   .then(data => {
-    var year = overlays[feature.properties.FIRE_YEAR]
-    year.forEach(fireYear => {
-      var coordinates = [fireYear.geometry.coordinates.LATITUDE, fireYear.geometry.coordinates.LONGITUDE];
-      var fireName = [fireYear.properties.FIRE_NAME];
-      var classification = [fireYear.properties.NWCG_CAUSE_CLASSIFICATION];
-      var cause = [fireYear.properties.NWCG_GENERAL_CAUSE];
-      var fireSize = [fireYear.properties.FIRE_SIZE];
-      var county = [fireYear.properties.FIPS_NAME];
-
-      // Add marker icons for wildfire locations
-
+    data.features.forEach(feature => {
+      var year = overlays[String(feature.properties.FIRE_YEAR)]
+      var coordinates = [feature.properties.LATITUDE, feature.properties.LONGITUDE];
+      var fireName = feature.properties.FIRE_NAME;
+      var classification = feature.properties.NWCG_CAUSE_CLASSIFICATION;
+      var cause = feature.properties.NWCG_GENERAL_CAUSE;
+      var fireSize = feature.properties.FIRE_SIZE;
+      var county = feature.properties.FIPS_NAME;
+      
+        // Add marker icons for wildfire locations
+        
       var wildFireIcon = L.icon({
-        iconURL: 'wildfires_icon.png',
+        iconUrl: 'IMG/wildfires_icon.png',
         iconSize: [30, 30],  //Adjust size as needed
         iconAnchor: [6, 20],
-        popupAnchor: [0, -16],
+        popupAnchor: [0, -16]
 
-      });
+    });
+      L.marker(coordinates, {icon: wildFireIcon})
+      .bindPopup("<h3><h3>Fire Name:" + fireName + "<h3><h3>County: " + county + "<h3><h3>Fire Size: " + fireSize + "<h3><h3>Classification: " + classification + "<h3><h3> Cause: " + cause + "</h3>").addTo(year)
 
-      L.marker((coordinates), {icon: smallerMarker})
-      .bindPopup("<h3><h3>Fire Name:" + fireName + "<h3><h3>County: " + county + "<h3><h3>Fire Size: " + fireSize + "<h3><h3>Classification: " + classification + "<h3><h3> Cause: " + cause + "</h3>")
-      .addTo(year)
-    })
 
-  })
+   
+    });
+        
+
+          });
+
+
+ 
+   
   
-  // Handle any errors
-  .catch(error => console.error('Error loading GeoJSON:', error));
+
 
 
