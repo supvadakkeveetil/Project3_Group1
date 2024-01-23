@@ -42,7 +42,7 @@ The data for wildfire visualization was collected from reliable sources such as 
 6.	Bar_chart – The code for generating bar charts of the Top 20 largest wildfires 
 
 #### References
-1. US Department of Agriculture – Research Archive: Link: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6
+1. US Department of Agriculture – Research Archive: Link: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6;(Short, Karen C. 2022. Spatial wildfire occurrence data for the United States, 1992-2020 [FPA_FOD_20221014]. 6th Edition. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2013-0009.6)
 2. CA. Gov Fire Hazard Severity Zone data, Link: https://data.ca.gov/dataset/fhsz-in-sra
 3. CA. Gov California Fire Facilities for Wildland Fire Protection, Link: https://data.ca.gov/dataset/cal-fire-facilities-for-wildland-fire-protection
 4. Leaflet Library
