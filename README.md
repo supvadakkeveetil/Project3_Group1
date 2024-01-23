@@ -39,7 +39,7 @@ The data for wildfire visualization was collected from reliable sources such as 
 3.	MongoDB_setup.ipynb – Loading Wildfire data into the MongoDB
 4.	Wildfire Visualization folder – Java script and HTML files for generating the Interactive Leaflet Map which shows the Wildfire Hazard Zones and Fire facilities located.
 5.	Fire_Map – Java script and HTML files that show the Fires over the years 2000-2020
-6.	Bar_chart – The code for generating bar charts of the Top 20 largest wildfires 
+6.	Bar_chart – The code for generating bar charts of the Top 20 largest wildfires and causes
 
 #### References
 1. US Department of Agriculture – Research Archive: Link: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6;(Short, Karen C. 2022. Spatial wildfire occurrence data for the United States, 1992-2020 [FPA_FOD_20221014]. 6th Edition. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2013-0009.6)
