@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wildfire Causes Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
+    <style>
+        body {
+            background-color: #333; /* Dark Background */
+            color: white; /* White Text */
+            font-family: Arial, sans-serif; /* Font Style */
+            text-align: center;
+        }
+        .chart-container {
+            width: 70%;
+            height: auto;
+            margin: auto;
+            background-color: #222; /* Chart Background */
+            border-radius: 10px;
+            padding: 20px;
+        }
+        canvas {
+            background-color: #333; /* Canvas Background */
+        }
+    </style>
+</head>
+<body>
+    <h2>Top 10 Causes of Wildfires in the United States (2000-2020)</h2>
+    <div class="chart-container">
+        <canvas id="wildfireCausesChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('wildfireCausesChart');
+        const wildfireCausesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Natural', 'Miscellaneous', 'Equipment and vehicle use', 'Arson/incendiarism', 'Debris and open burning', 'Recreation and ceremony', 'Power generation/transmission/distribution', 'Firearms and explosives use', 'Smoking', 'Railroad operations and maintenance'],
+                datasets: [{
+                    label: 'Total Acres Burned',
+                    data: [90186450, 29403760, 8162748, 7790600, 6093058, 4196657, 3116600, 640304.6, 606273.4, 525291],
+                    backgroundColor: ['darkred', 'red', 'orangered', 'tomato', 'coral', 'darkorange', 'orange', 'gold', 'yellow', 'lightyellow'],
+                    borderColor: 'white',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Total Acres Burned',
+                            color: 'white',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Fire Cause',
+                            color: 'white',
+                            font: {
+                                size: 16
+                            }
+                        },
+                        ticks: {
+                            color: 'white'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Top 10 Causes of Wildfires in the United States (2000-2020)',
+                        color: 'white',
+                        font: {
+                            size: 18
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wildfire Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+    <style>
+        body {
+            background-color: black; /* Dark Background */
+            color: white; /* White Text */
+            font-family: Arial, sans-serif; /* Font Style */
+        }
+        .chart-container {
+            width: 80%;
+            height: auto;
+            margin: auto;
+        }
+        canvas {
+            background-color: #333; /* Graph Background */
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="wildfireChart"></canvas>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('wildfireChart').getContext('2d');
+        var wildfireChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+                labels: ['OKS - STARBUCK (2017) (OK)', 'DOE (2020) (CA)', 'LONG DRAW (2012) (OR)', 'WALLOW (2011) (AZ)', 'BOUNDARY (2004) (AK)', 'MINTO FLATS SOUTH (2009) (AK)', 'BISCUIT (2002) (OR)', 'DALL CITY (2004) (AK)', 'HWY 152 (2006) (NM)', 'BILLY CK (2004) (AK)'],
+                datasets: [{
+                    label: 'Fire Size (acres)',
+                    data: [662700, 589368, 558198, 538049, 537627, 517078, 499945, 483280, 479549, 463994],
+                    backgroundColor: ['darkred', 'red', 'orangered', 'tomato', 'coral', 'darkorange', 'orange', 'gold', 'yellow', 'lightyellow'],
+                    borderColor: 'white',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Fire Size (acres)',
+                            fontColor: 'white',
+                            fontSize: 14
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            fontColor: 'white'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Fire Name',
+                            fontColor: 'white',
+                            fontSize: 14
+                        },
+                        ticks: {
+                            fontColor: 'white'
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                        fontColor: 'white'
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Top 10 Largest Wildfires in the United States (2000-2020)',
+                    fontColor: 'white',
+                    fontSize: 18
+                }
+            }
+        });
+    </script>
+</body>
+</html>
