@@ -20,10 +20,11 @@ The data for wildfire visualization was collected from reliable sources such as 
 -	Fire Hazard Severity Zones data
 -	Wildland Fire Facilities data 
 
-#### 2. Data Cleaning
+#### 2. Data Cleaning and Storage
 1.	Converting the required data from SQLite, Shapefiles to Geojson and CSV format 
 2.	Removing unnecessary data. Filtering data for just California and for a certain period 
 3.	Checking the structure of data and ensuring it was in the right format.
+4.	Stored data into MongoDB
 
 #### 3. Data Visualizations
 -	Create comparative visualizations to highlight the variations in wildfire occurrences over the years
