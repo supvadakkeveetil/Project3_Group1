@@ -7,7 +7,7 @@ The primary aim of this project is to develop an interactive and comprehensive d
 ### Tools
 The following tools were used to build this project
 •	Python 
-•	Geopandas
+•	Geopandas - Additional Python Pandas Library that was used in the Project
 •	JavaScript
 •	CSS
 •	HTML
@@ -50,8 +50,9 @@ The data for wildfire visualization was collected from reliable sources such as 
 5. Bar chart - https://d3-graph-gallery.com/graph/barplot_horizontal.html
 
 ##### Acknowledgements:
-Leonard Paul-Kamara
-Natural Chan 
+- Leonard Paul-Kamara
+- Natural Chan
+for their support and guidance throughout the project.
 
 ###### Team Members:
 Supriya Vadakkeveetil, Jesse Reeves, Aditya Saini
