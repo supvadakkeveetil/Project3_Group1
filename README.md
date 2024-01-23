@@ -32,8 +32,7 @@ The data for wildfire visualization was collected from reliable sources such as 
 -	Offer contextual information on factors contributing to wildfires, such as Natural or Human Causes
 
 #### 4. Final Vizualizations
-1.	Link to Wildfires HTML page
-
+1.	Link to Wildfires Web page : [(https://supvadakkeveetil.github.io/Project3_Group1/)](https://supvadakkeveetil.github.io/Project3_Group1/)
 #### Code Files:
 1.	Wildfires_sort.ipynb – Geojson and CSV files from SQLite
 2.	FireFac.ipynb – Geojson from Shape files using Geopandas
@@ -41,6 +40,9 @@ The data for wildfire visualization was collected from reliable sources such as 
 4.	Wildfire Visualization folder – Java script and HTML files for generating the Interactive Leaflet Map which shows the Wildfire Hazard Zones and Fire facilities located.
 5.	Fire_Map – Java script and HTML files that show the Fires over the years 2000-2020
 6.	Bar_chart – The code for generating bar charts of the Top 20 largest wildfires and causes
+
+#### Ethical Considerations
+In upholding the principles of data privacy and security in the Wildfires Visualization project, measures have been implemented to guarantee that no sensitive information is utilized, and strict adherence to prevailing data regulations is followed. Our dedication to ethical data practices extends to the explicit purpose of our project — education. The data employed in our class project is sourced exclusively from reputable government websites that explicitly permit its use for educational analysis. Every effort has been made to ensure the accuracy of the data, and our commitment to precision extends seamlessly to the representation and visualization of the information.
 
 #### References
 1. US Department of Agriculture – Research Archive: Link: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6;(Short, Karen C. 2022. Spatial wildfire occurrence data for the United States, 1992-2020 [FPA_FOD_20221014]. 6th Edition. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2013-0009.6)
