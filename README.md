@@ -7,9 +7,9 @@ The primary aim of this project is to develop an interactive and comprehensive d
 ### Tools
 The following tools were used to build this project
 
-•	Python 
-
 •	Geopandas - Additional Python Pandas Library that was used in the Project
+
+•	Python 
 
 •	JavaScript
 
